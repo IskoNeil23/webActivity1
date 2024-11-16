@@ -1,0 +1,268 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"></head>
+<style>
+:root{
+  --background-dark: #000000;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(2.jpg);
+  background-position: center;
+  align-items: center;
+  text-align: center;
+  height: 600px;
+  background-size: cover;
+}
+
+
+.button-56 {
+  margin-left: 43em;
+  margin-top: 1em;
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+h1{
+  color: #ffdeda;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5em;
+  -webkit-text-stroke: 2px palevioletred;
+
+  
+  
+}
+h5{
+  text-align: center;
+  align-items: center;
+  width: 600PX;
+  margin-left: 37em;
+  margin-top: 2em;
+}
+.navbar {
+    background-color: rgb(26, 7, 32)
+    padding: 10px 20px; /* Spacing around the items */
+    height: 20px;
+}
+
+.navbar ul {
+    list-style: none; /* Removes bullet points from the list */
+    display: flex; /* Enables flexbox layout */
+    justify-content: flex-end; /* Aligns items to the right */
+    margin: 0; /* Removes default margin from the list */
+    padding: 0; /* Removes default padding from the list */
+}
+
+.navbar li {
+    display: flex;
+    margin-left: 20px; /* Adds space between the navigation items */
+    color: antiquewhite;
+}
+
+.navbar a {
+    color: white; /* White text color */
+    text-decoration: none; /* Removes underline from links */
+    padding: 10px 15px; /* Adds padding around the text */
+    flex: 1;
+    transition: background-color 0.3s all ease; /* Smooth transition for background color */
+}
+
+.navbar a:hover {
+    background-color: #555; /* Changes background color on hover */
+    border-radius: 5px; /* Rounds the corners of the button */
+}
+
+.hero-section{
+  align-items: flex-start;
+  margin-left: 22em ;
+  
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card{
+  list-style: none;
+  position: relative;
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+  filter 200ms linear,
+  transform 200ms linear;
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}</style>
+<body>
+  <div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" class="login">Home</a></li>
+            <li><a href="#" class="signup">About</a></li>
+            <li><a href="#" class="login">Contact</a></li>
+            <li><a href="#" class="signup">Login</a></li>
+        </ul>
+    </nav>
+  <h1 class="Des">HeartSync</h1>
+        <h5>Welcome to HeartSync – the dating website designed to help you find real connections without the pressure. Whether you’re here for new friendships, a date, or just exploring, HeartSync makes it easy to meet like-minded people. Our smart matching system connects you with people who share your interests, and our ice-breaker prompts take away the awkwardness of starting a conversation. Ready to swipe, match, and chat? Join HeartSync today and start your journey to finding someone special!</h5>
+        <button class="button-56" >Match Now!</button>
+  
+<section class="hero-section">
+  <div class="card-grid">
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url(e.png)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">MATCH</h3>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url(d.png)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">CHAT</h3>
+      </div>
+    </a>
+    <a class="card" href="#">
+      <div class="card__background" style="background-image: url(b.png)"></div>
+      <div class="card__content">
+        <h3 class="card__heading">DATE</h3>
+      </div>
+     </a>
+     
+      <div></div></div>
+</section>
+</body>

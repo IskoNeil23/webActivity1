@@ -1,0 +1,117 @@
+h5{
+    text-align: center;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    width: 400PX;
+    margin-left: 250px;
+}
+
+h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif ;
+    margin-top: 200px;
+    color: white;
+    width: 400px;
+    margin-left: 250px;
+    
+
+}
+
+
+
+.bg{
+    background-image: url(tm.png);
+    background-position: center;
+    align-items: center;
+    text-align: center;
+    height: 700px;
+    background-size: cover;
+}
+.navbar {
+    background-color: rgb(26, 7, 32)
+    padding: 10px 20px; /* Spacing around the items */
+    height: 20px;
+}
+
+.navbar ul {
+    list-style: none; /* Removes bullet points from the list */
+    display: flex; /* Enables flexbox layout */
+    justify-content: flex-end; /* Aligns items to the right */
+    margin: 0; /* Removes default margin from the list */
+    padding: 0; /* Removes default padding from the list */
+}
+
+.navbar li {
+    display: flex;
+    margin-left: 20px; /* Adds space between the navigation items */
+    color: antiquewhite;
+}
+
+.navbar a {
+    color: white; /* White text color */
+    text-decoration: none; /* Removes underline from links */
+    padding: 10px 15px; /* Adds padding around the text */
+    flex: 1;
+    transition: background-color 0.3s all ease; /* Smooth transition for background color */
+}
+
+.navbar a:hover {
+    background-color: #09098fed; /* Changes background color on hover */
+    border-radius: 5px; /* Rounds the corners of the button */
+}
+
+.button-56 {
+  align-items: center;
+  background-color: #13298f;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  margin-left: 250px;
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  margin-left: 250p;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #0f20a3;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
